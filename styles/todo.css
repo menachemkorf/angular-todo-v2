@@ -1,0 +1,28 @@
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 2%;
+}
+
+.list-group {
+    margin-bottom: 0;
+}
+
+.panel-body {
+    padding: 0;
+}
+.list-group-header {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.active > a {
+    color: white;
+}

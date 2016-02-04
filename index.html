@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/todo.css">
+    <title>Angular - Todo</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                  <ul class="list-group">
+                       <li class="list-group-item list-group-header">Categories</li>
+                       <li class="list-group-item"><a href="#">All</a></li>
+                       <li class="list-group-item active"><a>Active</a></li>
+                       <li class="list-group-item"><a href="#">Completed</a></li>
+                       <li class="list-group-item"><a href="#">Important</a></li>
+                   </ul>
+            </div>
+
+            <div ui-view class="content col-md-9"></div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
+
+    <script src="app/todo.js"></script>
+    <script src="app/todos/todos-controller.js"></script>
+
+</body>
+</html>
