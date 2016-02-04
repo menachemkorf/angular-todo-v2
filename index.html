@@ -12,13 +12,35 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                  <ul class="list-group">
-                       <li class="list-group-item list-group-header">Categories</li>
-                       <li class="list-group-item"><a href="#" ui-sref="todos">All</a></li>
-                       <li class="list-group-item"><a href="#" ui-sref="active">Active</a></li>
-                       <li class="list-group-item"><a href="#" ui-sref="completed">Completed</a></li>
-                       <li class="list-group-item"><a href="#" ui-sref="important">Important</a></li>
-                   </ul>
+
+                <div class="list-group">
+                    <div class="list-group-item list-group-header">Categories</div>
+                    <a class="list-group-item"
+                    href="#"
+                    ui-sref-active="active"
+                    ui-sref="todos">
+                        All
+                    </a>
+                    <a class="list-group-item"
+                    href="#"
+                    ui-sref-active="active"
+                    ui-sref="active">
+                        Active
+                    </a>
+                    <a class="list-group-item"
+                    href="#"
+                    ui-sref-active="active"
+                    ui-sref="completed">
+                        Completed
+                    </a>
+                    <a class="list-group-item"
+                    href="#"
+                    ui-sref-active="active"
+                    ui-sref="important">
+                        Important
+                    </a>
+                </div>
+
             </div>
 
             <div ui-view class="content col-md-9"></div>
