@@ -10,6 +10,24 @@ angular.module('todo', ['ui.router'])
                 templateUrl: 'app/todos/todos.tmpl.html',
                 controller: 'TodosCtrl',
                 controllerAs: 'ctrl'
+            })
+            .state('active', {
+                url: '/active',
+                templateUrl: 'app/todos/todos.tmpl.html',
+                controller: 'TodosCtrl',
+                controllerAs: 'ctrl'
+            })
+            .state('completed', {
+                url: '/completed',
+                templateUrl: 'app/todos/todos.tmpl.html',
+                controller: 'TodosCtrl',
+                controllerAs: 'ctrl'
+            })
+            .state('important', {
+                url: '/important',
+                templateUrl: 'app/todos/todos.tmpl.html',
+                controller: 'TodosCtrl',
+                controllerAs: 'ctrl'
             });
 
 
