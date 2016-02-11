@@ -1,8 +1,23 @@
-<ul class="list-group">
-	<li class="list-group-item list-group-header">Todos</li>
+<ul class="list-group todo-list">
+	<li class="list-group-item list-group-header todo-item">Todos</li>
     <li ng-repeat="todo in ctrl.todos track by $index"
 	class="list-group-item">
         <h4 class="list-group-item-heading">{{todo.title}}</h4>
-        <p class="list-group-item-text">{{todo.description}}</p>
+        <p class="list-group-item-text todo-description">{{todo.description}}</p>
+
+        <span class="todo-done">
+            <label>
+                <input type="checkbox"
+                    ng-model="todo.done"> Done
+            </label>
+        </span>
+
+        <span class="todo-important">
+            <label>
+                <input type="checkbox"
+                    ng-model="todo.important"> Important
+            </label>
+        </span>
+
     </li>
 </ul>

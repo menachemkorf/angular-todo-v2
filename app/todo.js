@@ -14,19 +14,19 @@ angular.module('todo', ['ui.router'])
             .state('active', {
                 url: '/active',
                 templateUrl: 'app/todos/todos.tmpl.html',
-                controller: 'TodosCtrl',
+                controller: 'ActiveCtrl',
                 controllerAs: 'ctrl'
             })
             .state('completed', {
                 url: '/completed',
                 templateUrl: 'app/todos/todos.tmpl.html',
-                controller: 'TodosCtrl',
+                controller: 'DoneCtrl',
                 controllerAs: 'ctrl'
             })
             .state('important', {
                 url: '/important',
                 templateUrl: 'app/todos/todos.tmpl.html',
-                controller: 'TodosCtrl',
+                controller: 'ImportantCtrl',
                 controllerAs: 'ctrl'
             });
 

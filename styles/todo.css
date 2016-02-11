@@ -19,3 +19,19 @@ a:active {
 .active > a {
     color: white;
 }
+
+.todo-list .todo-description {
+    display: inline-block;
+    width: 70%;
+}
+
+.todo-done,
+.todo-important {
+    display: inline-block;
+    width: 12%;
+}
+
+.todo-done label,
+.todo-important label {
+    font-weight: initial;
+}
