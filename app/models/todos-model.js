@@ -1,63 +1,47 @@
 'use strict';
 
 angular.module('todo')
-    .service('TodosModel', function() {
-        var service = this;
+    .factory('todosModel', function() {
 
         var todos = [{
+                id: 1,
                 title: 'Angular Components',
-                description: 'Views and Controllers, Directives and Services',
+                description: 'Views and Controllers, Directives and Services.',
                 done: false,
                 important: true
             },{
+                id: 2,
                 title: 'Angular Components',
-                description: 'Views and Controllers, Directives and Services',
+                description: 'Views and Controllers, Directives and Services.',
                 done: true,
                 important: true
             },{
+                id: 3,
                 title: 'Angular Components',
-                description: 'Views and Controllers, Directives and Services',
+                description: 'Views and Controllers, Directives and Services.',
                 done: false,
                 important: false
             },{
+                id: 4,
                 title: 'Angular Components',
-                description: 'Views and Controllers, Directives and Services',
+                description: 'Views and Controllers, Directives and Services.',
                 done: true,
                 important: false
             },{
+                id: 5,
                 title: 'Angular Components',
-                description: 'Views and Controllers, Directives and Services',
+                description: 'Views and Controllers, Directives and Services.',
                 done: false,
                 important: true
             },{
+                id: 6,
                 title: 'Angular Components',
-                description: 'Views and Controllers, Directives and Services',
+                description: 'Views and Controllers, Directives and Services.',
                 done: false,
                 important: false
             }
         ];
 
-        service.all = function() {
-            return todos;
-        };
-
-        service.done = function() {
-            return _.filter(todos, 'done');
-            /*console.log(done);
-            return done;*/
-        };
-
-        service.active = function() {
-            return _.filter(todos, ['done', false]);
-            //['active', false]
-            /*console.log(done);
-            return done;*/
-        };
-
-        service.important = function() {
-            return _.filter(todos, 'important');
-            /*console.log(done);
-            return done;*/
-        };
+        return todos;
 
     });

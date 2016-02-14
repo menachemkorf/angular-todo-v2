@@ -8,7 +8,7 @@
     <title>Angular - Todo</title>
 
 </head>
-<body>
+<body ng-controller="MainCtrl as main">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -40,6 +40,33 @@
                         Important
                     </a>
                 </div>
+
+                <div class="list-group sidebar-offcanvas">
+                    <div class="list-group-item list-group-header">Add Todo</div>
+                    <div class="list-group-item">
+                        <div class="form-group">
+                            <label for="new-todo-title">Title</label>
+                            <input type="text"
+                                class="form-control"
+                                id="new-todo-title"
+                                ng-model="main.newTodoTitle">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-todo-description">Content</label>
+                            <textarea name="description"
+                                class="form-control"
+                                id="new-todo-description"
+                                rows="3"
+                                ng-model="main.newTodoDescription">
+                            </textarea>
+                        </div>
+                        <button type="submit"
+                            class="btn btn-default"
+                            ng-click="main.add()">
+                            Add
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div ui-view class="content col-md-9"></div>
@@ -54,7 +81,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
 
     <script src="app/todo.js"></script>
+    <script src="app/main-controller.js"></script>
     <script src="app/models/todos-model.js"></script>
+    <script src="app/todos/todos-service.js"></script>
     <script src="app/todos/todos-controller.js"></script>
     <script src="app/todos/active-controller.js"></script>
     <script src="app/todos/done-controller.js"></script>

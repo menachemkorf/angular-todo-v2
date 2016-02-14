@@ -1,7 +1,9 @@
+'use strict';
+
 angular.module('todo')
-    .controller('DoneCtrl', function(TodosModel) {
+    .controller('DoneCtrl', function(TodosService) {
         var ctrl = this;
 
-        ctrl.todos = TodosModel.done();
+        ctrl.todos = TodosService.done();
 
     });
