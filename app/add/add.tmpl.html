@@ -1,0 +1,26 @@
+<div class="list-group sidebar-offcanvas">
+    <div class="list-group-item list-group-header">Add Todo</div>
+    <div class="list-group-item">
+        <div class="form-group">
+            <label for="new-todo-title">Title</label>
+            <input type="text"
+                class="form-control"
+                id="new-todo-title"
+                ng-model="add.newTodoTitle">
+        </div>
+        <div class="form-group">
+            <label for="new-todo-description">Content</label>
+            <textarea name="description"
+                class="form-control"
+                id="new-todo-description"
+                rows="3"
+                ng-model="add.newTodoDescription">
+            </textarea>
+        </div>
+        <button type="submit"
+            class="btn btn-default"
+            ng-click="add.add()">
+            Add
+        </button>
+    </div>
+</div>
