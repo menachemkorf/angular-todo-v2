@@ -14,7 +14,9 @@ angular.module('todo')
                 done: false,
                 important: false
             });
-            console.log(todosModel[todosModel.length-1].id);
+
+            main.newTodoTitle = '';
+            main.newTodoDescription = '';
 
         };
 
