@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('todo')
-    .factory('todosModel', function() {
+    .factory('todosModel', function($q) {
 
         var todos = [{
                 id: 1,
@@ -42,6 +42,23 @@ angular.module('todo')
             }
         ];
 
-        return todos;
+        var getTodos = function(query) {
+            var deferred = $q.defer();
+
+            deferred.resolve(todos);
+
+            return deferred.promise;
+        };
+
+        var addTodo = function(item) {
+            todos.push(item);
+        };
+
+
+
+        return {
+            getTodos: getTodos,
+            addTodo: addTodo
+        };
 
     });

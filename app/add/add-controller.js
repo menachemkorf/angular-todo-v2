@@ -2,24 +2,23 @@
 
 angular.module('todo')
     .controller('AddCtrl', function(todosModel) {
-        var main = this;
+        var ctrl = this;
 
-        main.add = function() {
+        ctrl.add = function() {
 
             var lastId = todosModel.length;
             var newId = lastId + 1;
 
-            todosModel.push({
+            todosModel.addTodo({
                 id: newId,
-                title: main.newTodoTitle,
-                description: main.newTodoDescription,
+                title: ctrl.newTodoTitle,
+                description: ctrl.newTodoDescription,
                 done: false,
                 important: false
             });
 
-            main.newTodoTitle = '';
-            main.newTodoDescription = '';
+            ctrl.newTodoTitle = '';
+            ctrl.newTodoDescription = '';
 
         };
-
     });

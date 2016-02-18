@@ -4,6 +4,7 @@ angular.module('todo')
     .service('TodosService', function(todosModel) {
         var service = this;
         var model = todosModel;
+        var todos;
 
         service.all = function() {
             return model;

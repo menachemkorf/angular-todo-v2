@@ -1,9 +1,17 @@
 'use strict';
 
 angular.module('todo')
-    .controller('ActiveCtrl', function(TodosService) {
+    .controller('ActiveCtrl', function(todosModel) {
         var ctrl = this;
 
-        ctrl.todos = TodosService.active();
-
+        todosModel.getTodos()
+            .then(function(items) {
+                ctrl.todos = _.filter(items, ['done', false]);
+            })
+            .catch(function(error) {
+                ctrl.error = error
+            })
+            .finally(function() {
+                console.log('Done!');
+            });
     });

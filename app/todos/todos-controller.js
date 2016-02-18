@@ -1,7 +1,17 @@
 'use strict';
 
 angular.module('todo')
-    .controller('TodosCtrl', function(TodosService) {
+    .controller('TodosCtrl', function(todosModel) {
         var ctrl = this;
-        ctrl.todos = TodosService.all();
+
+        todosModel.getTodos()
+            .then(function(items) {
+                ctrl.todos = items;
+            })
+            .catch(function(error) {
+                ctrl.error = error
+            })
+            .finally(function() {
+                console.log('Done!');
+            });
     });
